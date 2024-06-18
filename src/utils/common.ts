@@ -35,8 +35,8 @@ export const canMoveItem = (
   x: number,
   y: number
 ) => {
-  if (emptyX === x && emptyY - y !== 0) return true;
-  if (emptyY === y && emptyX - x !== 0) return true;
+  if (emptyX === x && Math.abs(emptyY - y) === 1) return true;
+  if (emptyY === y && Math.abs(emptyX - x) === 1) return true;
   return false;
 };
 
